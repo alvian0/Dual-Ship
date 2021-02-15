@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Player1
   - Player2
+  - Manager
+  - Projectile
+  - Asteroid
   layers:
   - Default
   - TransparentFX
