@@ -9,6 +9,15 @@ TagManager:
   - Manager
   - Projectile
   - Asteroid
+  - FusionPlayer
+  - Enemy1
+  - Dynamite
+  - EnemyProjectile
+  - Enemy2
+  - Count
+  - ESpawn
+  - Enemy3
+  - Laser
   layers:
   - Default
   - TransparentFX
@@ -21,10 +30,10 @@ TagManager:
   - Post
   - Player
   - Projectile
-  - 
-  - 
-  - 
-  - 
+  - EnemyProjectile
+  - InvisibleWall
+  - Enemy
+  - Shield
   - 
   - 
   - 

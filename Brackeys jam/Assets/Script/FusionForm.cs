@@ -10,6 +10,8 @@ public class FusionForm : MonoBehaviour
     public float FireRateSpeed = .3f;
     public GameObject bullets;
     public Transform muzzle1, muzzle2;
+    public GameObject DefusionParticle;
+    public float HP = 5;
 
     float FireRate;
     Rigidbody2D rb;
@@ -96,6 +98,7 @@ public class FusionForm : MonoBehaviour
         Player2.GetComponent<Rigidbody2D>().AddForce(transform.right * 10, ForceMode2D.Impulse);
 
         Camera.main.GetComponent<RippleCall>().ripple();
+        Instantiate(DefusionParticle, transform.position, Quaternion.identity);
 
         Destroy(gameObject);
     }
@@ -105,6 +108,16 @@ public class FusionForm : MonoBehaviour
         if (collision.gameObject.CompareTag("Asteroid"))
         {
             collision.gameObject.GetComponent<AsteroidFall>().StatterEffect();
+        }
+
+        if (collision.gameObject.CompareTag("Enemy2") || collision.gameObject.CompareTag("Enemy3"))
+        {
+            HP--;
+
+            if (HP <= 0)
+            {
+                SplitUps();
+            }
         }
     }
 }

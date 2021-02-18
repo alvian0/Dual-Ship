@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8290260428417124498}
   - component: {fileID: 8290260428417124503}
   - component: {fileID: 8290260428417124500}
+  - component: {fileID: 7452082966481593114}
   m_Layer: 9
   m_Name: Player1
   m_TagString: Player1
@@ -106,6 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ca126dca638c542a18514bb551d32a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerIndex: 1
   Speed: 10
   HorizontalAxis: Horizontal1
   VerticalAxis: Vertical1
@@ -113,6 +115,33 @@ MonoBehaviour:
   BulletImpact: 10
   Bullets: {fileID: 3119920653716789272, guid: 50d5db88270c53b41be4656318726885, type: 3}
   Muzzle: {fileID: 8290260428964722724}
+  ImuneTime: 1
+  WhatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 8192
+  EnemyForce: 10
+  CurrentHp: 0
+  ImuneDuration: 0
+  Imune: 0
+--- !u!95 &7452082966481593114
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8290260428417124499}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0357983b9fd2078489bd4adf20209aa6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8290260428615190312
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class CameraMove : MonoBehaviour
     public float Speed;
     public float MaxOrthograpicSize = 10f;
 
-    GameObject p1, p2;
+    GameObject p1, p2, FusionMode;
     Vector3 midPoint;
     float minOrthograpicSize;
 
@@ -23,6 +23,7 @@ public class CameraMove : MonoBehaviour
     {
         p1 = GameObject.FindGameObjectWithTag("Player1");
         p2 = GameObject.FindGameObjectWithTag("Player2");
+        FusionMode = GameObject.FindGameObjectWithTag("FusionPlayer");
 
         if (p1 != null && p2 != null)
         {
@@ -30,8 +31,13 @@ public class CameraMove : MonoBehaviour
             float Ypos = (p1.transform.position.y + p2.transform.position.y) / 2;
             midPoint = new Vector3(Xpos, Ypos, Zoffset);
 
-            float distance = Vector2.Distance(new Vector2(p1.transform.position.x,0), new Vector2(p2.transform.position.x,0)) / 5;
+            float distance = Vector2.Distance(p1.transform.position, p2.transform.position) / 5;
             Camera.main.orthographicSize = Mathf.Clamp(minOrthograpicSize + distance, 5, MaxOrthograpicSize);
+        }
+
+        else if (FusionMode != null)
+        {
+            Camera.main.orthographicSize = MaxOrthograpicSize;
         }
     }
 
