@@ -11,12 +11,16 @@ public class Enemy2 : MonoBehaviour
     public float Hp = 15;
     public GameObject DeadParticle;
 
+    AudioSource sfx;
     float FireRate;
     EnemyCounter count;
     EnemySpawner Spawner;
+    GameManager manager;
 
     void Start()
     {
+        manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
+        sfx = GameObject.Find("EnemySFX").GetComponent<AudioSource>();
         Spawner = GameObject.FindGameObjectWithTag("ESpawn").GetComponent<EnemySpawner>();
         count = GameObject.FindGameObjectWithTag("Count").GetComponent<EnemyCounter>();
         FireRate = FireRateSpeed;
@@ -63,9 +67,11 @@ public class Enemy2 : MonoBehaviour
 
     void Dead()
     {
-        count.EnemyInGame.Remove(gameObject);
-        Spawner.EmptySpawnPoint.Add(transform.position);
+        count.EnemyInGame.Remove(gameObject.transform.parent.gameObject);
+        Spawner.EmptySpawnPoint.Add(transform.parent.transform.position);
+        sfx.Play();
+        manager.GetScore();
         Instantiate(DeadParticle, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        Destroy(gameObject.transform.parent.gameObject);
     }
 }

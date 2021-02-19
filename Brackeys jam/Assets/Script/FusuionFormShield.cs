@@ -26,7 +26,7 @@ public class FusuionFormShield : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Asteroid"))
         {
-            HurtAndDestroy();
+            collision.gameObject.GetComponent<AsteroidFall>().StatterEffect();
         }
 
         if (collision.gameObject.CompareTag("EnemyProjectile"))
@@ -37,10 +37,9 @@ public class FusuionFormShield : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("EnemyProjectile"))
+        if (collision.CompareTag("Laser"))
         {
             HurtAndDestroy();
-            Destroy(collision.gameObject);
         }
     }
 

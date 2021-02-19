@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject[] EnemyToSpawn;
     public Transform[] SpawnPos;
     public float SpawnRateSpeed = 5;
-    public List<Vector2> EmptySpawnPoint;
+    public List<Vector3> EmptySpawnPoint;
 
     float SpawnRate;
 
@@ -31,6 +31,14 @@ public class EnemySpawner : MonoBehaviour
 
             if (EmptySpawnPoint.Count != 0)
             {
+                foreach (GameObject enemiess in count.EnemyInGame)
+                {
+                    if (enemiess.transform.position == EmptySpawnPoint[0])
+                    {
+                        EmptySpawnPoint.RemoveAt(0);
+                    }
+                }
+                
                 Spawn(EmptySpawnPoint[0]);
                 EmptySpawnPoint.RemoveAt(0);
             }

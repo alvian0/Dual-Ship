@@ -12,12 +12,15 @@ public class FusionForm : MonoBehaviour
     public Transform muzzle1, muzzle2;
     public GameObject DefusionParticle;
     public float HP = 5;
+    public float WaitTimeBefore = 1;
 
+    GameManager manager;
     float FireRate;
     Rigidbody2D rb;
 
     void Start()
     {
+        manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
         rb = GetComponent<Rigidbody2D>();
         FireRate = FireRateSpeed;
     }
@@ -39,8 +42,14 @@ public class FusionForm : MonoBehaviour
             FireRate -= Time.deltaTime;
         }
 
+        WaitTimeBefore -= Time.deltaTime;
+
+        if (WaitTimeBefore <= 0)
+        {
+            DestroyCondition();
+        }
+
         moveConditions();
-        DestroyCondition();
     }
 
     void moveConditions()
@@ -91,16 +100,22 @@ public class FusionForm : MonoBehaviour
 
     void SplitUps()
     {
-        GameObject Player1 = Instantiate(p1, new Vector2(transform.position.x + -1.5f, transform.position.y), Quaternion.identity);
-        GameObject Player2 = Instantiate(p2, new Vector2(transform.position.x + 1.5f, transform.position.y), Quaternion.identity);
+        HP--;
 
-        Player1.GetComponent<Rigidbody2D>().AddForce(transform.right * -10, ForceMode2D.Impulse);
-        Player2.GetComponent<Rigidbody2D>().AddForce(transform.right * 10, ForceMode2D.Impulse);
+        if (HP <= 0)
+        {
+            GameObject Player1 = Instantiate(p1, new Vector2(transform.position.x + -1.5f, transform.position.y), Quaternion.identity);
+            GameObject Player2 = Instantiate(p2, new Vector2(transform.position.x + 1.5f, transform.position.y), Quaternion.identity);
 
-        Camera.main.GetComponent<RippleCall>().ripple();
-        Instantiate(DefusionParticle, transform.position, Quaternion.identity);
+            Player1.GetComponent<Rigidbody2D>().AddForce(transform.right * -10, ForceMode2D.Impulse);
+            Player2.GetComponent<Rigidbody2D>().AddForce(transform.right * 10, ForceMode2D.Impulse);
 
-        Destroy(gameObject);
+            Camera.main.GetComponent<RippleCall>().ripple();
+            Instantiate(DefusionParticle, transform.position, Quaternion.identity);
+            manager.FusionSFX.Play();
+
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -110,14 +125,22 @@ public class FusionForm : MonoBehaviour
             collision.gameObject.GetComponent<AsteroidFall>().StatterEffect();
         }
 
+        if (collision.gameObject.CompareTag("EnemyProjectile"))
+        {
+            SplitUps();
+        }
+
         if (collision.gameObject.CompareTag("Enemy2") || collision.gameObject.CompareTag("Enemy3"))
         {
-            HP--;
+            SplitUps();
+        }
+    }
 
-            if (HP <= 0)
-            {
-                SplitUps();
-            }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Laser"))
+        {
+            SplitUps();
         }
     }
 }

@@ -23,9 +23,7 @@ public class Dynamite : MonoBehaviour
 
             if (collisions.gameObject.GetComponent<Rigidbody2D>() != null)
             {
-                if (!collisions.gameObject.CompareTag("EnemyProjectile") || 
-                    !collisions.gameObject.CompareTag("Projectile") || 
-                    !collisions.gameObject.CompareTag("Projectile"))
+                if (!collisions.gameObject.CompareTag("EnemyProjectile") && !collisions.gameObject.CompareTag("Projectile"))
                 {
                     Vector3 ImpactDirectios = transform.position - collisions.gameObject.transform.position;
 

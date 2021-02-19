@@ -138,6 +138,7 @@ MonoBehaviour:
   muzzle1: {fileID: 6551853186188317969}
   muzzle2: {fileID: 8274955447994521998}
   DefusionParticle: {fileID: 2958928345697158724, guid: 3d9c7625f33d8bf43b008cfa6f66bc42, type: 3}
+  HP: 5
 --- !u!95 &4378347355011869621
 Animator:
   serializedVersion: 3
@@ -10185,7 +10186,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &6574849798810797718
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -75,6 +75,7 @@ public class Player1 : MonoBehaviour
     {
         Imune = true;
         anim.SetBool("Hit", true);
+        manager.HurtSFX.Play();
 
         if (PlayerIndex == 1)
         {
@@ -127,6 +128,17 @@ public class Player1 : MonoBehaviour
             Hurt();
         }
 
+        if (collision.gameObject.CompareTag("EnemyProjectile"))
+        {
+            if (Imune)
+            {
+                Debug.Log("Imune");
+                return;
+            }
+
+            Hurt();
+        }
+
         if (collision.gameObject.CompareTag("Enemy2"))
         {
             if (Imune)
@@ -163,17 +175,6 @@ public class Player1 : MonoBehaviour
             }
 
             collision.GetComponent<Dynamite>().Explode();
-        }
-
-        if (collision.CompareTag("EnemyProjectile"))
-        {
-            if (Imune)
-            {
-                Debug.Log("Imune");
-                return;
-            }
-
-            Hurt();
         }
 
         if (collision.CompareTag("Laser"))

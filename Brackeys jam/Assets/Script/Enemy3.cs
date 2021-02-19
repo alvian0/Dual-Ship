@@ -7,14 +7,24 @@ public class Enemy3 : MonoBehaviour
     public float Hp;
     public float FireRateSpeed = 2;
     public GameObject Laser;
+    public GameObject LaserPrep;
     public float BeamLenght = 10;
     public GameObject DeadParticle;
+    public Transform muzzle;
 
+    GameManager manager;
+    AudioSource sfx;
     bool IsShootingLaser;
     float FireRate;
+    EnemyCounter count;
+    EnemySpawner Spawner;
 
     void Start()
     {
+        manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
+        sfx = GameObject.Find("EnemySFX").GetComponent<AudioSource>();
+        Spawner = GameObject.FindGameObjectWithTag("ESpawn").GetComponent<EnemySpawner>();
+        count = GameObject.FindGameObjectWithTag("Count").GetComponent<EnemyCounter>();
         FireRate = FireRateSpeed;
     }
 
@@ -50,14 +60,19 @@ public class Enemy3 : MonoBehaviour
         if (Hp <= 0)
         {
             Instantiate(DeadParticle, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            count.EnemyInGame.Remove(transform.parent.gameObject);
+            sfx.Play();
+            manager.GetScore();
+            Spawner.EmptySpawnPoint.Add(transform.parent.transform.position);
+            Destroy(transform.parent.gameObject);
         }
     }
 
     IEnumerator LaserBeam()
     {
         IsShootingLaser = true;
-        GameObject lasers = Instantiate(Laser, transform.position, Quaternion.identity, transform);
+        GameObject LaserParent = Instantiate(LaserPrep, muzzle.position, Quaternion.identity, transform);
+        GameObject lasers = Instantiate(Laser, muzzle.position, Quaternion.identity, LaserParent.transform);
 
         yield return new WaitForSeconds(1f);
 
@@ -67,6 +82,6 @@ public class Enemy3 : MonoBehaviour
 
         FireRate = FireRateSpeed;
         IsShootingLaser = false;
-        Destroy(lasers.gameObject);
+        Destroy(LaserParent.gameObject);
     }
 }

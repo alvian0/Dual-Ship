@@ -30,7 +30,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.6742573, y: 4.3936625, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 8904613524027580649}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -97,10 +98,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 50
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -183,8 +184,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1f70d852b8a8e64d90efbd6bf444bff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 15
+  Hp: 10
   FireRateSpeed: 2
-  Laser: {fileID: 6567420862041539610, guid: b37bcba9ba2833f42bddefc6499b20f9, type: 3}
-  BeamLenght: 10
+  Laser: {fileID: 4398368085164815594, guid: 496ea363b1e064d4784c12c4d002169f, type: 3}
+  LaserPrep: {fileID: 7336963316192644465, guid: ad188e469b88a954ea27ec46f5f0f6bf, type: 3}
+  BeamLenght: 35
   DeadParticle: {fileID: 6781055582672411987, guid: 0ecbc6869a60fff4eb90ae1e44bb468c, type: 3}
+  muzzle: {fileID: 8904613524027580649}
+--- !u!1 &6545977079936053797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8904613524027580649}
+  m_Layer: 13
+  m_Name: Muzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8904613524027580649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6545977079936053797}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.946, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3124069790511263168}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
