@@ -10,6 +10,7 @@ public class Enemy2 : MonoBehaviour
     public float BulletImpact = 10;
     public float Hp = 15;
     public GameObject DeadParticle;
+    public GameObject StatterObject;
 
     AudioSource sfx;
     float FireRate;
@@ -71,6 +72,7 @@ public class Enemy2 : MonoBehaviour
         Spawner.EmptySpawnPoint.Add(transform.parent.transform.position);
         sfx.Play();
         manager.GetScore();
+        Instantiate(StatterObject, transform.position, Quaternion.identity);
         Instantiate(DeadParticle, transform.position, Quaternion.identity);
         Destroy(gameObject.transform.parent.gameObject);
     }

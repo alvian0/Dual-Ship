@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 313806295
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 8123304096623964060, guid: bd616c287ac2fe744a49363342bfca69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -191,6 +191,7 @@ MonoBehaviour:
   BeamLenght: 35
   DeadParticle: {fileID: 6781055582672411987, guid: 0ecbc6869a60fff4eb90ae1e44bb468c, type: 3}
   muzzle: {fileID: 8904613524027580649}
+  StatterEffect: {fileID: 2439903971296607282, guid: fb5e8f5272b22e24884a716803142952, type: 3}
 --- !u!1 &6545977079936053797
 GameObject:
   m_ObjectHideFlags: 0

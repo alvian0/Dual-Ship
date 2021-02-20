@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2913122709944977808}
   - component: {fileID: 2913122709944977807}
-  - component: {fileID: 2913122709944977805}
   - component: {fileID: 2913122709944977806}
   - component: {fileID: 5374652403927106726}
   m_Layer: 13
@@ -71,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 313806295
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -4547007776821762901, guid: 0c0d45f2070c15545a92c569aade9263, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -85,43 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &2913122709944977805
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2913122709944977809}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.55, y: 0.65}
-    newSize: {x: 0.55, y: 0.65}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.065, y: 0.325}
-      - {x: -0.074999996, y: 0.325}
-      - {x: -0.145, y: 0.265}
-      - {x: -0.275, y: 0.105}
-      - {x: -0.275, y: -0.195}
-      - {x: -0.225, y: -0.24499999}
-      - {x: -0.205, y: -0.285}
-      - {x: -0.155, y: -0.325}
-      - {x: 0.195, y: -0.325}
-      - {x: 0.24499999, y: -0.275}
-      - {x: 0.275, y: -0.205}
-      - {x: 0.275, y: 0.205}
 --- !u!50 &2913122709944977806
 Rigidbody2D:
   serializedVersion: 4
@@ -166,7 +128,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2913122709954902030}
   - component: {fileID: 2913122709954902029}
-  - component: {fileID: 2913122709954902027}
   - component: {fileID: 2913122709954902028}
   - component: {fileID: 501972585640648812}
   m_Layer: 13
@@ -227,8 +188,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 313806295
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 7127568341195244945, guid: 0c0d45f2070c15545a92c569aade9263, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -241,42 +202,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &2913122709954902027
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2913122709954902031}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.7, y: 0.35}
-    newSize: {x: 0.7, y: 0.35}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.21, y: 0.095}
-      - {x: 0.099999994, y: 0.145}
-      - {x: 0.03, y: 0.175}
-      - {x: -0.16, y: 0.175}
-      - {x: -0.35, y: 0.035}
-      - {x: -0.35, y: -0.145}
-      - {x: -0.32999998, y: -0.175}
-      - {x: 0.29999998, y: -0.175}
-      - {x: 0.35, y: -0.16499999}
-      - {x: 0.35, y: -0.005}
-      - {x: 0.28, y: 0.035}
 --- !u!50 &2913122709954902028
 Rigidbody2D:
   serializedVersion: 4
@@ -321,7 +246,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2913122710111566270}
   - component: {fileID: 2913122710111566269}
-  - component: {fileID: 2913122710111566267}
   - component: {fileID: 2913122710111566268}
   - component: {fileID: 6772900656501891640}
   m_Layer: 13
@@ -382,8 +306,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 313806295
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 1217631204841985928, guid: 0c0d45f2070c15545a92c569aade9263, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -396,39 +320,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &2913122710111566267
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2913122710111566271}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.4, y: 0.55}
-    newSize: {x: 0.4, y: 0.55}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.06, y: 0.275}
-      - {x: -0.13, y: 0.225}
-      - {x: -0.19, y: 0.13499999}
-      - {x: -0.19999999, y: -0.055}
-      - {x: -0.19999999, y: -0.275}
-      - {x: 0.06, y: -0.275}
-      - {x: 0.19999999, y: -0.24499999}
-      - {x: 0.19999999, y: 0.275}
 --- !u!50 &2913122710111566268
 Rigidbody2D:
   serializedVersion: 4
@@ -473,7 +364,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2913122710422679955}
   - component: {fileID: 2913122710422679954}
-  - component: {fileID: 2913122710422679952}
   - component: {fileID: 2913122710422679953}
   - component: {fileID: 1737419412741290327}
   m_Layer: 13
@@ -534,8 +424,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 313806295
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 2022451306695869379, guid: 0c0d45f2070c15545a92c569aade9263, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -548,40 +438,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &2913122710422679952
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2913122710422679956}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.65, y: 0.65}
-    newSize: {x: 0.65, y: 0.65}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.13499999, y: 0.325}
-      - {x: -0.255, y: 0.325}
-      - {x: -0.325, y: 0.295}
-      - {x: -0.325, y: 0.085}
-      - {x: -0.315, y: -0.13499999}
-      - {x: -0.065, y: -0.305}
-      - {x: 0.024999999, y: -0.325}
-      - {x: 0.325, y: -0.325}
-      - {x: 0.325, y: 0.195}
 --- !u!50 &2913122710422679953
 Rigidbody2D:
   serializedVersion: 4
@@ -626,7 +482,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2913122710506375707}
   - component: {fileID: 2913122710506375706}
-  - component: {fileID: 2913122710506375704}
   - component: {fileID: 2913122710506375705}
   - component: {fileID: 2586849850964855083}
   m_Layer: 13
@@ -687,8 +542,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 313806295
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 7591838855919925240, guid: 0c0d45f2070c15545a92c569aade9263, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -701,42 +556,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &2913122710506375704
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2913122710506375708}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.75, y: 0.6}
-    newSize: {x: 0.75, y: 0.6}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.375, y: 0.29999998}
-      - {x: 0.105, y: 0.29999998}
-      - {x: 0.055, y: 0.25}
-      - {x: -0.275, y: 0.22}
-      - {x: -0.295, y: 0.19999999}
-      - {x: -0.375, y: -0.12}
-      - {x: -0.375, y: -0.29999998}
-      - {x: -0.024999999, y: -0.29999998}
-      - {x: 0.095, y: -0.22999999}
-      - {x: 0.305, y: -0.01}
-      - {x: 0.375, y: 0.16}
 --- !u!50 &2913122710506375705
 Rigidbody2D:
   serializedVersion: 4

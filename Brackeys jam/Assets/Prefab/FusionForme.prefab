@@ -138,7 +138,9 @@ MonoBehaviour:
   muzzle1: {fileID: 6551853186188317969}
   muzzle2: {fileID: 8274955447994521998}
   DefusionParticle: {fileID: 2958928345697158724, guid: 3d9c7625f33d8bf43b008cfa6f66bc42, type: 3}
-  HP: 5
+  Shield: {fileID: 7508713749218647620}
+  HP: 1
+  WaitTimeBefore: 1
 --- !u!95 &4378347355011869621
 Animator:
   serializedVersion: 3
@@ -227,8 +229,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -150941179
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 2156018056937876934, guid: 9fba90e0c3f769841b4ec7ba3a95d3d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5199,9 +5201,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -150941179
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4863686116774285915, guid: 0cbbae2c3021b5f44b49d8c0156252f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
@@ -10215,7 +10217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 759d9ae8651880a449f8eeaa5a0dff95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 5
+  HP: 3
   ShieldDestroyPartilce: {fileID: 3104373528945140752, guid: 184d711c6e1e25542bf1fe6df6a797a1, type: 3}
 --- !u!1 &7906210164809463541
 GameObject:

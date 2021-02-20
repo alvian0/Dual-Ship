@@ -9,8 +9,11 @@ public class Dynamite : MonoBehaviour
     public float Impact;
     public float Hp = 3;
 
+    AudioSource SFX;
+
     private void Start()
     {
+        SFX = GameObject.Find("DynamiteSFX").GetComponent<AudioSource>();
         transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, Random.Range(0, 360));
     }
 
@@ -48,6 +51,8 @@ public class Dynamite : MonoBehaviour
                 collisions.GetComponent<Enemy2>().Hp -= 2;
             }
         }
+
+        SFX.Play();
 
         Instantiate(DynamiteParticle, transform.position, Quaternion.identity);
 

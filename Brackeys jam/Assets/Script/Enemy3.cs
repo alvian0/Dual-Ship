@@ -11,6 +11,7 @@ public class Enemy3 : MonoBehaviour
     public float BeamLenght = 10;
     public GameObject DeadParticle;
     public Transform muzzle;
+    public GameObject StatterEffect;
 
     GameManager manager;
     AudioSource sfx;
@@ -59,6 +60,7 @@ public class Enemy3 : MonoBehaviour
 
         if (Hp <= 0)
         {
+            Instantiate(StatterEffect, transform.position, Quaternion.identity);
             Instantiate(DeadParticle, transform.position, Quaternion.identity);
             count.EnemyInGame.Remove(transform.parent.gameObject);
             sfx.Play();

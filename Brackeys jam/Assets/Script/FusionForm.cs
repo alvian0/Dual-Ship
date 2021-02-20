@@ -11,6 +11,7 @@ public class FusionForm : MonoBehaviour
     public GameObject bullets;
     public Transform muzzle1, muzzle2;
     public GameObject DefusionParticle;
+    public GameObject Shield;
     public float HP = 5;
     public float WaitTimeBefore = 1;
 
@@ -127,19 +128,37 @@ public class FusionForm : MonoBehaviour
 
         if (collision.gameObject.CompareTag("EnemyProjectile"))
         {
+            manager.Hp1--;
+            manager.Hp2--;
             SplitUps();
         }
 
         if (collision.gameObject.CompareTag("Enemy2") || collision.gameObject.CompareTag("Enemy3"))
         {
+            manager.Hp1--;
+            manager.Hp2--;
             SplitUps();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (Shield != null)
+        {
+            return;
+        }
+
         if (collision.CompareTag("Laser"))
         {
+            manager.Hp1--;
+            manager.Hp2--;
+            SplitUps();
+        }
+
+        if (collision.CompareTag("Enemy1"))
+        {
+            manager.Hp1--;
+            manager.Hp2--;
             SplitUps();
         }
     }

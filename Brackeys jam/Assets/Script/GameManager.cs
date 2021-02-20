@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     [Header("Game Mechanic")]
     public GameObject FusionForms;
     public GameObject DefusionEffect;
-    public AudioSource FusionSFX, HurtSFX;
     public float ScoreEarn = 100;
     public float Score = 0;
     public float multiple = 1;
@@ -20,32 +19,54 @@ public class GameManager : MonoBehaviour
     [Range(1, 100)]
     public float Hp2 = 100;
 
+    [Header("Music and SFX")]
+    public AudioSource FusionSFX;
+    public AudioSource HurtSFX;
+    public AudioSource BackgroundMusic;
+    public GameObject LoopPart;
+
     [Header("Menu GUI")]
     public GameObject PauseScreen;
     public GameObject InGameUI;
     public GameObject GameOverScreen;
     public Text ScoreBar, ScoreMultipleIndicator, EndScreenScore;
     public Image Hpbar1, HpBar2;
+    public Text Player1Name, Player2Name;
 
     bool IsPaused = false;
     float ComboTime;
     bool IsInCombo;
     GameObject p1, p2;
     float HpLimit, HplImit2;
+    float MusicLeght;
+    bool MusicLoop = false;
 
     void Start()
     {
+        Player1Name.text = PlayerPrefs.GetString("P1");
+        Player2Name.text = PlayerPrefs.GetString("P2");
+
         Time.timeScale = 1f;
+
         HpLimit = Hp1;
         HplImit2 = Hp2;
+
+        MusicLeght = BackgroundMusic.clip.length - .75f;
+
         p1 = GameObject.FindGameObjectWithTag("Player1");
         p2 = GameObject.FindGameObjectWithTag("Player2");
     }
 
     void Update()
     {
-        Physics2D.IgnoreLayerCollision(10, 9);
-        Physics2D.IgnoreLayerCollision(11, 10);
+        MusicLeght -= Time.deltaTime;
+
+        if (MusicLeght <= 0)
+        {
+            BackgroundMusic.Stop();
+            Debug.Log("Looped");
+            LoopPart.SetActive(true);
+        }
 
         Hpbar1.fillAmount = Hp1 / HpLimit;
         HpBar2.fillAmount = Hp2 / HplImit2;
