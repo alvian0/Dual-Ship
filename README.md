@@ -1,4 +1,4 @@
-# Brackeys-jam-2020-1
+# Dual Ship
 Source code of my game for brackeys game jam 2020.1
 
 Play the game : https://alvian-eka.itch.io/dual-ship
